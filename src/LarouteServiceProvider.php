@@ -84,7 +84,7 @@ class LarouteServiceProvider extends ServiceProvider
             function ($app) {
                 $config     = $app['config'];
 
-                $routes     = new Routes(app('Dingo\Api\Routing\Router')->getRoutes(), $config->get('laroute.filter', 'all'), $config->get('laroute.action_namespace', ''));
+                $routes     = new Routes(app('Dingo\Api\Routing\Router')->getRoutes($config->get('api.version')), $config->get('laroute.filter', 'all'), $config->get('laroute.action_namespace', ''));
 
                 $generator  = $app->make('Gefar\Laroute\Generators\GeneratorInterface');
 
