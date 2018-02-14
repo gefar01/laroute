@@ -1,6 +1,6 @@
 (function () {
 
-    var laroute = (function () {
+    var larouteApi = (function () {
 
         var routes = {
 
@@ -181,14 +181,14 @@
      */
     if (typeof define === 'function' && define.amd) {
         define(function () {
-            return laroute;
+            return larouteApi;
         });
     }
     else if (typeof module === 'object' && module.exports){
-        module.exports = laroute;
+        module.exports = larouteApi;
     }
     else {
-        window.$NAMESPACE$ = laroute;
+        window.$NAMESPACE$ = larouteApi;
     }
 
 }).call(this);
