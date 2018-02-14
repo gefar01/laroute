@@ -1,16 +1,16 @@
 <?php
 
-namespace Lord\Laroute\Generators;
+namespace Gefar\Laroute\Generators;
 
 use Illuminate\Filesystem\Filesystem;
-use Lord\Laroute\Compilers\CompilerInterface as Compiler;
+use Gefar\Laroute\Compilers\CompilerInterface as Compiler;
 
 class TemplateGenerator implements GeneratorInterface
 {
     /**
      * The compiler instance.
      *
-     * @var \Lord\Laroute\Compilers\CompilerInterface
+     * @var \Gefar\Laroute\Compilers\CompilerInterface
      */
     protected $compiler;
 
@@ -24,7 +24,7 @@ class TemplateGenerator implements GeneratorInterface
     /**
      * Create a new template generator instance.
      *
-     * @param $compiler   \Lord\Laroute\Compilers\CompilerInterface
+     * @param $compiler   \Gefar\Laroute\Compilers\CompilerInterface
      * @param $filesystem \Illuminate\Filesystem\Filesystem
      *
      */

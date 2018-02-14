@@ -10,13 +10,13 @@ return [
     /*
      * The destination filename for the javascript file.
      */
-    'filename' => 'laroute',
+    'filename' => 'larouteApi',
 
     /*
      * The namespace for the helper functions. By default this will bind them to
      * `window.laroute`.
      */
-    'namespace' => 'laroute',
+    'namespace' => 'larouteApi',
 
     /*
      * Generate absolute URLs

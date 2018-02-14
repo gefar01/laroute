@@ -1,9 +1,9 @@
 <?php
 
-namespace Lord\Laroute\Console\Commands;
+namespace Gefar\Laroute\Console\Commands;
 
-use Lord\Laroute\Routes\Collection as Routes;
-use Lord\Laroute\Generators\GeneratorInterface as Generator;
+use Gefar\Laroute\Routes\Collection as Routes;
+use Gefar\Laroute\Generators\GeneratorInterface as Generator;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command;
@@ -17,7 +17,7 @@ class LarouteGeneratorCommand extends Command
      *
      * @var string
      */
-    protected $name = 'laroute:generate';
+    protected $name = 'laroute-api:generate';
 
     /**
      * The console command description.
@@ -36,14 +36,14 @@ class LarouteGeneratorCommand extends Command
     /**
      * An array of all the registered routes.
      *
-     * @var \Lord\Laroute\Routes\Collection
+     * @var \Gefar\Laroute\Routes\Collection
      */
     protected $routes;
 
     /**
      * The generator instance.
      *
-     * @var \Lord\Laroute\Generators\GeneratorInterface
+     * @var \Gefar\Laroute\Generators\GeneratorInterface
      */
     protected $generator;
 
@@ -103,7 +103,7 @@ class LarouteGeneratorCommand extends Command
         $namespace  = $this->getOptionOrConfig('namespace');
         $routes     = $this->routes->toJSON();
         $absolute   = $this->config->get('laroute.absolute', false);
-        $rootUrl    = $this->config->get('app.url', '');
+        $rootUrl    = $this->config->get('api.domains', '');
         $prefix		= $this->config->get('laroute.prefix', '');
 
         return compact('namespace', 'routes', 'absolute', 'rootUrl', 'prefix');

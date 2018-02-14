@@ -16,7 +16,7 @@ Install the usual [composer](https://getcomposer.org/) way.
 ```json
 {
 	"require" : {
-		"lord/laroute" : "2.*"
+		"gefar/laroute" : "2.*"
 	}
 }
 ```
@@ -29,7 +29,7 @@ n.b Laravel 4.x users, check out [version 1.3.2](https://github.com/aaronlord/la
 	
 	'providers' => array(
 		...
-		Lord\Laroute\LarouteServiceProvider::class,
+		Gefar\Laroute\LarouteServiceProvider::class,
 	],
 	
 	...
@@ -40,7 +40,7 @@ n.b Laravel 4.x users, check out [version 1.3.2](https://github.com/aaronlord/la
 Copy the packages config files.
 
 ```
-php artisan vendor:publish --provider='Lord\Laroute\LarouteServiceProvider'
+php artisan vendor:publish --provider='Gefar\Laroute\LarouteServiceProvider'
 ```
 
 ###### app/config/packages/lord/laroute/config.php
@@ -57,13 +57,13 @@ return [
     /*
      * The destination filename for the javascript file.
      */
-    'filename' => 'laroute',
+    'filename' => 'laroute-api',
 
     /*
      * The namespace for the helper functions. By default this will bind them to
      * `window.laroute`.
      */
-    'namespace' => 'laroute',
+    'namespace' => 'larouteApi',
 
     /*
      * Generate absolute URLs
@@ -118,7 +118,7 @@ php artisan laroute:generate
 With the default configuration, this will create a `public/js/laroute.js` file to include in your page, or build.
 
 ```html
-<script src="/js/laroute.js"></script>
+<script src="/js/laroute-api.js"></script>
 ```
 
 **Note: You'll have to `laroute:generate` if you change your routes.**

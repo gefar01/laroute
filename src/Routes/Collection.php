@@ -1,10 +1,10 @@
 <?php
 
-namespace Lord\Laroute\Routes;
+namespace Gefar\Laroute\Routes;
 
-use Illuminate\Routing\Route;
-use Illuminate\Routing\RouteCollection;
-use Lord\Laroute\Routes\Exceptions\ZeroRoutesException;
+use Dingo\Api\Routing\Route;
+use Dingo\Api\Routing\RouteCollection;
+use Gefar\Laroute\Routes\Exceptions\ZeroRoutesException;
 
 class Collection extends \Illuminate\Support\Collection
 {

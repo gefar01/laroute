@@ -1,6 +1,6 @@
 <?php
 
-namespace Lord\Laroute\Routes;
+namespace Gefar\Laroute\Routes;
 
 use Mockery;
 

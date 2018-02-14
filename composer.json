@@ -1,11 +1,11 @@
 {
-    "name": "lord/laroute",
+    "name": "gefar/laroute",
     "description": "Access Laravels URL/Route helper functions, from JavaScript.",
     "keywords"  : ["laravel", "routes", "routing", "javascript"],
     "authors": [
         {
-            "name": "Aaron Lord",
-            "email": "hello@aaronlord.is"
+            "name": "Thomas FARGES",
+            "email": ""
         }
     ],
     "license" : "MIT",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Lord\\Laroute\\": "src/"
+            "Gefar\\Laroute\\": "src/"
         }
     },
     "minimum-stability": "dev"

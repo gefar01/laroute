@@ -1,10 +1,10 @@
 <?php
 
-namespace Lord\Laroute;
+namespace Gefar\Laroute;
 
 use Illuminate\Support\ServiceProvider;
-use Lord\Laroute\Console\Commands\LarouteGeneratorCommand;
-use Lord\Laroute\Routes\Collection as Routes;
+use Gefar\Laroute\Console\Commands\LarouteGeneratorCommand;
+use Gefar\Laroute\Routes\Collection as Routes;
 
 class LarouteServiceProvider extends ServiceProvider
 {
@@ -54,8 +54,8 @@ class LarouteServiceProvider extends ServiceProvider
     protected function registerGenerator()
     {
         $this->app->bind(
-            'Lord\Laroute\Generators\GeneratorInterface',
-            'Lord\Laroute\Generators\TemplateGenerator'
+            'Gefar\Laroute\Generators\GeneratorInterface',
+            'Gefar\Laroute\Generators\TemplateGenerator'
         );
     }
 
@@ -67,8 +67,8 @@ class LarouteServiceProvider extends ServiceProvider
     protected function registerCompiler()
     {
         $this->app->bind(
-            'Lord\Laroute\Compilers\CompilerInterface',
-            'Lord\Laroute\Compilers\TemplateCompiler'
+            'Gefar\Laroute\Compilers\CompilerInterface',
+            'Gefar\Laroute\Compilers\TemplateCompiler'
         );
     }
 
@@ -83,8 +83,10 @@ class LarouteServiceProvider extends ServiceProvider
             'command.laroute.generate',
             function ($app) {
                 $config     = $app['config'];
-                $routes     = new Routes($app['router']->getRoutes(), $config->get('laroute.filter', 'all'), $config->get('laroute.action_namespace', ''));
-                $generator  = $app->make('Lord\Laroute\Generators\GeneratorInterface');
+
+                $routes     = new Routes(app('Dingo\Api\Routing\Router')->getRoutes(), $config->get('laroute.filter', 'all'), $config->get('laroute.action_namespace', ''));
+
+                $generator  = $app->make('Gefar\Laroute\Generators\GeneratorInterface');
 
                 return new LarouteGeneratorCommand($config, $routes, $generator);
             }

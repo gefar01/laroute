@@ -1,6 +1,6 @@
 <?php
 
-namespace Lord\Laroute\Generators;
+namespace Gefar\Laroute\Generators;
 
 use Mockery;
 
@@ -16,7 +16,7 @@ class TemplateGeneratorTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->compiler   = $this->mock('Lord\Laroute\Compilers\CompilerInterface');
+        $this->compiler   = $this->mock('Gefar\Laroute\Compilers\CompilerInterface');
         $this->filesystem = $this->mock('Illuminate\Filesystem\Filesystem');
 
         $this->generator = new TemplateGenerator($this->compiler, $this->filesystem);
@@ -25,7 +25,7 @@ class TemplateGeneratorTest extends \PHPUnit_Framework_TestCase
     public function testItIsOfTheCorrectInterface()
     {
         $this->assertInstanceOf(
-            'Lord\Laroute\Generators\GeneratorInterface',
+            'Gefar\Laroute\Generators\GeneratorInterface',
             $this->generator
         );
     }
