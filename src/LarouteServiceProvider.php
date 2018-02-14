@@ -16,7 +16,7 @@ class LarouteServiceProvider extends ServiceProvider
     public function boot()
     {
         $source = $this->getConfigPath();
-        $this->publishes([$source => config_path('laroute.php')], 'config');
+        $this->publishes([$source => config_path('laroute-api.php')], 'config');
     }
 
     /**
@@ -43,7 +43,7 @@ class LarouteServiceProvider extends ServiceProvider
      */
     protected function getConfigPath()
     {
-        return realpath(__DIR__.'/../config/laroute.php');
+        return realpath(__DIR__ . '/../config/laroute-api.php');
     }
 
     /**

@@ -90,11 +90,11 @@ return [
     'action_namespace' => '',
 
     /*
-     * The path to the template `laroute.js` file. This is the file that contains
+     * The path to the template `laroute-api.js` file. This is the file that contains
      * the ported helper Laravel url/route functions and the route data to go
      * with them.
      */
-    'template' => 'vendor/lord/laroute/src/templates/laroute.js',
+    'template' => 'vendor/lord/laroute/src/templates/laroute-api.js',
     
     /*
      * Appends a prefix to URLs. By default the prefix is an empty string.
@@ -107,7 +107,7 @@ return [
     
 ```
 
-### Generate the `laroute.js`
+### Generate the `laroute-api.js`
 
 To access the routes, we need to "port" them over to a JavaScript file:
 
@@ -115,7 +115,7 @@ To access the routes, we need to "port" them over to a JavaScript file:
 php artisan laroute:generate
 ```
 
-With the default configuration, this will create a `public/js/laroute.js` file to include in your page, or build.
+With the default configuration, this will create a `public/js/laroute-api.js` file to include in your page, or build.
 
 ```html
 <script src="/js/laroute-api.js"></script>

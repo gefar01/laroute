@@ -43,11 +43,11 @@ return [
     'action_namespace' => '',
 
     /*
-     * The path to the template `laroute.js` file. This is the file that contains
+     * The path to the template `laroute-api.js` file. This is the file that contains
      * the ported helper Laravel url/route functions and the route data to go
      * with them.
      */
-    'template' => 'vendor/lord/laroute/src/templates/laroute.js',
+    'template' => 'vendor/gefar/laroute/src/templates/laroute-api.js',
     
     /*
      * Appends a prefix to URLs. By default the prefix is an empty string.

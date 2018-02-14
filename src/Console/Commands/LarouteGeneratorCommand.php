@@ -90,7 +90,7 @@ class LarouteGeneratorCommand extends Command
      */
     protected function getTemplatePath()
     {
-        return $this->config->get('laroute.template');
+        return $this->config->get('laroute-api.template');
     }
 
     /**
@@ -102,9 +102,9 @@ class LarouteGeneratorCommand extends Command
     {
         $namespace  = $this->getOptionOrConfig('namespace');
         $routes     = $this->routes->toJSON();
-        $absolute   = $this->config->get('laroute.absolute', false);
-        $rootUrl    = $this->config->get('api.domains', '');
-        $prefix		= $this->config->get('laroute.prefix', '');
+        $absolute   = $this->config->get('laroute-api.absolute', false);
+        $rootUrl    = $this->config->get('api.domain', '');
+        $prefix		= $this->config->get('laroute-api.prefix', '');
 
         return compact('namespace', 'routes', 'absolute', 'rootUrl', 'prefix');
     }
@@ -136,7 +136,7 @@ class LarouteGeneratorCommand extends Command
             return $option;
         }
 
-        return $this->config->get("laroute.{$key}");
+        return $this->config->get("laroute-api.{$key}");
     }
 
     /**
@@ -151,23 +151,23 @@ class LarouteGeneratorCommand extends Command
                 'path',
                 'p',
                 InputOption::VALUE_OPTIONAL,
-                sprintf('Path to the javscript assets directory (default: "%s")', $this->config->get('laroute.path'))
+                sprintf('Path to the javscript assets directory (default: "%s")', $this->config->get('laroute-api.path'))
             ],
             [
                 'filename',
                 'f',
                 InputOption::VALUE_OPTIONAL,
-                sprintf('Filename of the javascript file (default: "%s")', $this->config->get('laroute.filename'))
+                sprintf('Filename of the javascript file (default: "%s")', $this->config->get('laroute-api.filename'))
             ],
             [
                 'namespace',
                 null,
-                InputOption::VALUE_OPTIONAL, sprintf('Javascript namespace for the functions (think _.js) (default: "%s")', $this->config->get('laroute.namespace'))
+                InputOption::VALUE_OPTIONAL, sprintf('Javascript namespace for the functions (think _.js) (default: "%s")', $this->config->get('laroute-api.namespace'))
             ],
             [
                 'prefix',
                 'pr',
-                InputOption::VALUE_OPTIONAL, sprintf('Prefix for the generated URLs (default: "%s")', $this->config->get('laroute.prefix'))
+                InputOption::VALUE_OPTIONAL, sprintf('Prefix for the generated URLs (default: "%s")', $this->config->get('laroute-api.prefix'))
             ],
         ];
     }
