@@ -1,11 +1,11 @@
 {
     "name": "gefar/laroute",
     "description": "Access Laravels URL/Route helper functions, from JavaScript.",
-    "keywords"  : ["laravel", "routes", "routing", "javascript"],
+    "keywords"  : ["laravel", "routes", "Dingo api", "routing", "javascript"],
     "authors": [
         {
             "name": "Thomas FARGES",
-            "email": ""
+            "email": "thomas.farges@gmail.com"
         }
     ],
     "license" : "MIT",
