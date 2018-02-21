@@ -103,7 +103,7 @@ class LarouteGeneratorCommand extends Command
         $namespace  = $this->getOptionOrConfig('namespace');
         $routes     = $this->routes->toJSON();
         $absolute   = $this->config->get('laroute-api.absolute', false);
-        $rootUrl    = $this->config->get('api.domain', '');
+        $rootUrl    = $this->config->get('app.url', '');
         $prefix		= $this->config->get('laroute-api.prefix', '');
 
         return compact('namespace', 'routes', 'absolute', 'rootUrl', 'prefix');
