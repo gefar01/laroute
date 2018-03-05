@@ -24,7 +24,7 @@ class LarouteGeneratorCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Generate a laravel routes file';
+    protected $description = 'Generate a dingo routes file';
 
     /**
      * Config

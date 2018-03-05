@@ -27,7 +27,7 @@ class LarouteServiceProvider extends ServiceProvider
     public function register()
     {
         $source = $this->getConfigPath();
-        $this->mergeConfigFrom($source, 'laroute');
+        $this->mergeConfigFrom($source, 'laroute-api');
 
         $this->registerGenerator();
 
@@ -80,7 +80,7 @@ class LarouteServiceProvider extends ServiceProvider
     protected function registerCommand()
     {
         $this->app->singleton(
-            'command.laroute.generate',
+            'command.laroute-api.generate',
             function ($app) {
                 $config     = $app['config'];
 
