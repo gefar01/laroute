@@ -92,6 +92,6 @@ class LarouteServiceProvider extends ServiceProvider
             }
         );
 
-        $this->commands('command.laroute.generate');
+        $this->commands('command.laroute-api.generate');
     }
 }
